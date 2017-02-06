@@ -139,7 +139,7 @@ public class ChecksumTaskDispatcher {
         	System.out.println("General exception occurred.");
         	e.printStackTrace();
         } finally {
-        	//executor.shutdown();
+        	executor.shutdown();
         }
 
 	}
