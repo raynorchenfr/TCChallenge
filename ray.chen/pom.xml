@@ -13,8 +13,28 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <archive>
+			            <manifest>
+			                <addClasspath>true</addClasspath>
+			                <classpathPrefix>lib/</classpathPrefix>
+			                <mainClass>ray.chen.main.ChallengeRunner</mainClass>
+			            </manifest>
+			        </archive>
                 </configuration>
             </plugin>
+            <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-shade-plugin</artifactId>
+		        <version>1.6</version>
+		        <executions>
+		          <execution>
+		            <phase>package</phase>
+		            <goals>
+		              <goal>shade</goal>
+		            </goals>
+		          </execution>
+		        </executions>
+		      </plugin>
         </plugins>
     </build>  
   <dependencies>
